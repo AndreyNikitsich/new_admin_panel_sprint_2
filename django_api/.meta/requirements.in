@@ -1,0 +1,5 @@
+django==4.2.6
+psycopg2-binary==2.9.9
+django-split-settings==1.2.0
+
+uwsgi==2.0.23
