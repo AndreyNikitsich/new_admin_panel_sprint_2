@@ -132,7 +132,7 @@ pytest==7.4.3
 pytest-cov==4.1.0
     # via -r .meta/requirements-dev.in
 python-dotenv==1.0.0
-    # via -r .meta/requirements-dev.in
+    # via -r .meta/requirements.in
 pyyaml==6.0.1
     # via
     #   bandit

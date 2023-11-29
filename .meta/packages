@@ -6,6 +6,8 @@ django-split-settings==1.2.0
     # via -r .meta/requirements.in
 psycopg2-binary==2.9.9
     # via -r .meta/requirements.in
+python-dotenv==1.0.0
+    # via -r .meta/requirements.in
 sqlparse==0.4.4
     # via django
 uwsgi==2.0.23
