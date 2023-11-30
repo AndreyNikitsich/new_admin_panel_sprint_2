@@ -16,8 +16,6 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /code
 
-ENV DJANGO_SETTINGS_MODULE 'config.settings'
-
 RUN groupadd -r web && useradd -d /code -r -g web web_user \
     && chown web_user:web -R /code
 
