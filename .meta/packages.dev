@@ -26,7 +26,7 @@ django==4.2.6
     #   -r .meta/requirements.in
     #   django-debug-toolbar
 django-debug-toolbar==4.2.0
-    # via -r .meta/requirements-dev.in
+    # via -r .meta/requirements.in
 django-split-settings==1.2.0
     # via -r .meta/requirements.in
 docutils==0.20.1

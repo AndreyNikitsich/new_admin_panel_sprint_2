@@ -1,6 +1,10 @@
 asgiref==3.7.2
     # via django
 django==4.2.6
+    # via
+    #   -r .meta/requirements.in
+    #   django-debug-toolbar
+django-debug-toolbar==4.2.0
     # via -r .meta/requirements.in
 django-split-settings==1.2.0
     # via -r .meta/requirements.in
@@ -9,6 +13,8 @@ psycopg2-binary==2.9.9
 python-dotenv==1.0.0
     # via -r .meta/requirements.in
 sqlparse==0.4.4
-    # via django
+    # via
+    #   django
+    #   django-debug-toolbar
 uwsgi==2.0.23
     # via -r .meta/requirements.in
