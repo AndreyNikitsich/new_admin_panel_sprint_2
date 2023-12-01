@@ -18,4 +18,5 @@ include(
     'components/middleware.py',
     'components/security.py',
     'components/static.py',
+    'components/logging.py',
 )

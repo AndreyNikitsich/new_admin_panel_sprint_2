@@ -2,10 +2,12 @@ version: "3.9"
 services:
 
   backend:
+    volumes:
+      - static:/opt/app/static
     build:
       context: app
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     depends_on:
       - postgres
 
@@ -25,8 +27,11 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/configs:/etc/nginx/conf.d:ro
-      - ./nginx/data:/data/:ro
+      - static:/data/static:ro
     depends_on:
       - backend
     ports:
       - "80:80"
+
+volumes:
+  static:

@@ -1,4 +1,5 @@
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
