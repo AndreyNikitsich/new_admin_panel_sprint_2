@@ -92,6 +92,7 @@ class FilmWork(UUIDMixin, TimeStampedMixin):
     rating = models.FloatField(
         _('rating'),
         blank=True,
+        null=True,
         validators=[MinValueValidator(0), MaxValueValidator(100)]
     )
     type = models.CharField(_('type'), choices=FilmWorkType.choices)
