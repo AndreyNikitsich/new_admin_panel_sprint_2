@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-slim 
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates openssl tzdata make git \
@@ -23,11 +23,10 @@ COPY .meta/packages ./requirements.txt
 
 RUN mkdir -p /opt/app/static/ \
      && mkdir -p /var/www/static/ \
-#     && mkdir -p /opt/app/media/ \
+     && mkdir -p /opt/app/media/ \
+     && mkdir -p /var/www/media/ \
      && pip install --upgrade pip \
      && pip install -r requirements.txt
-
-#     && mkdir -p /var/www/media/ \
 
 COPY . .
 
@@ -36,4 +35,4 @@ RUN python manage.py collectstatic --noinput && python manage.py compilemessages
 EXPOSE 8000
 
 USER web_user
-ENTRYPOINT ["sh", "uwsgi/run_uwsgi.sh"]
+ENTRYPOINT ["sh", "entrypoint.sh"]

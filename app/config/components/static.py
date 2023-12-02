@@ -1,5 +1,9 @@
 STATIC_URL = 'static/'
 STATIC_ROOT = 'static/'
+
+MEDIA_URL='media/'
+MEDIA_ROOT='media/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
