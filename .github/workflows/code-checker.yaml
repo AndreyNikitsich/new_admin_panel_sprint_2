@@ -15,7 +15,7 @@ jobs:
         cd app && make venv
     - name: Run flake8 & mypy
       run: |
-        make lint
+        cd app && make lint
   tests:
     name: Tests
     runs-on: ubuntu-latest
@@ -30,4 +30,4 @@ jobs:
         cd app && make venv
     - name: Run tests
       run: |
-        make coverage
+        cd app && make coverage
