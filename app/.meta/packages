@@ -4,12 +4,17 @@ django==4.2.6
     # via
     #   -r .meta/requirements.in
     #   django-debug-toolbar
+    #   djangorestframework
 django-debug-toolbar==4.2.0
     # via -r .meta/requirements.in
 django-split-settings==1.2.0
     # via -r .meta/requirements.in
+djangorestframework==3.14.0
+    # via -r .meta/requirements.in
 psycopg2-binary==2.9.9
     # via -r .meta/requirements.in
+pytz==2023.3.post1
+    # via djangorestframework
 sqlparse==0.4.4
     # via
     #   django
