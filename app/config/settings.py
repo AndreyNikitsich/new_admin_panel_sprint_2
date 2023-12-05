@@ -11,8 +11,9 @@ include(
     "components/database.py",
     "components/installed_apps.py",
     "components/internationalization.py",
+    "components/logging.py",
     "components/middleware.py",
+    "components/rest_framework.py",
     "components/security.py",
     "components/static.py",
-    "components/logging.py",
 )
