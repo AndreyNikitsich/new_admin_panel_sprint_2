@@ -22,4 +22,6 @@ class FilmWorkReadOnlyViewSet(ReadOnlyModelViewSet):
         actors = ArrayAgg(
             "persons__full_name", filter=Q(personfilmwork__role=PersonFilmWork.Roles.ACTOR), distinct=True
         )
-        return FilmWork.objects.all().values().annotate(genres=genres, directors=directors, writers=writers, actors=actors)
+        return (
+            FilmWork.objects.all().values().annotate(genres=genres, directors=directors, writers=writers, actors=actors)
+        )

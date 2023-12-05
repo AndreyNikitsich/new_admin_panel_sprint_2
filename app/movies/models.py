@@ -25,7 +25,7 @@ class Genre(UUIDMixin, TimeStampedMixin):
     description = models.TextField(_("description"), blank=True)
 
     class Meta:
-        db_table = 'content\".\"genre'
+        db_table = 'content"."genre'
         indexes = [models.Index(fields=("name",))]
         verbose_name = _("genre")
         verbose_name_plural = _("genres")
@@ -40,7 +40,7 @@ class GenreFilmWork(UUIDMixin):
     created = models.DateTimeField(auto_now_add=True, verbose_name=_("created"), null=True)
 
     class Meta:
-        db_table = 'content\".\"genre_film_work'
+        db_table = 'content"."genre_film_work'
         constraints = [models.UniqueConstraint(fields=("genre", "film_work"), name="unique_genre_film_work")]
         verbose_name = _("film genre")
         verbose_name_plural = _("film genres")
@@ -50,7 +50,7 @@ class Person(UUIDMixin, TimeStampedMixin):
     full_name = models.CharField(_("full_name"), max_length=255)
 
     class Meta:
-        db_table = 'content\".\"person'
+        db_table = 'content"."person'
         indexes = [models.Index(fields=("full_name",))]
         verbose_name = _("person")
         verbose_name_plural = _("persons")
@@ -72,7 +72,7 @@ class PersonFilmWork(UUIDMixin):
     created = models.DateTimeField(auto_now_add=True, verbose_name=_("created"), null=True)
 
     class Meta:
-        db_table = 'content\".\"person_film_work'
+        db_table = 'content"."person_film_work'
         constraints = [
             models.UniqueConstraint(fields=("person", "film_work", "role"), name="unique_person_film_work_role")
         ]
@@ -81,7 +81,6 @@ class PersonFilmWork(UUIDMixin):
 
 
 class FilmWork(UUIDMixin, TimeStampedMixin):
-
     class FilmWorkType(models.TextChoices):
         MOVIE = "movie", _("movie")
         TV_SHOW = "tv_show", _("tv show")
@@ -90,10 +89,7 @@ class FilmWork(UUIDMixin, TimeStampedMixin):
     description = models.TextField(_("description"), blank=True)
     creation_date = models.DateField(_("creation_date"), null=True)
     rating = models.FloatField(
-        _("rating"),
-        blank=True,
-        null=True,
-        validators=[MinValueValidator(0), MaxValueValidator(100)]
+        _("rating"), blank=True, null=True, validators=[MinValueValidator(0), MaxValueValidator(100)]
     )
     type = models.CharField(_("type"), choices=FilmWorkType.choices)
 
@@ -101,7 +97,7 @@ class FilmWork(UUIDMixin, TimeStampedMixin):
     persons = models.ManyToManyField(Person, through="PersonFilmWork")
 
     class Meta:
-        db_table = 'content\".\"film_work'
+        db_table = 'content"."film_work'
         indexes = [models.Index(fields=("creation_date", "rating"))]
         verbose_name = _("film work")
         verbose_name_plural = _("film works")
