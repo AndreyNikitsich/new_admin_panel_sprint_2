@@ -45,7 +45,7 @@ clean: clean_pyc
 
 # Test and lint
 coverage:
-	$(RUN) pytest . -vv
+	$(RUN) pytest . -vv --cov
 
 ruff:
 	$(RUN) ruff check .
