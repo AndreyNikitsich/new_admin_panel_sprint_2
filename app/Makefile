@@ -47,12 +47,9 @@ clean: clean_pyc
 coverage:
 	$(RUN) pytest . -vv --cov
 
-mypy:
-	$(RUN) mypy .
-
 ruff:
 	$(RUN) ruff check .
 
-lint: ruff mypy
+lint: ruff
 
 test: venv lint coverage

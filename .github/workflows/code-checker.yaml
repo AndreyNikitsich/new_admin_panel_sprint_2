@@ -13,7 +13,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd app && make venv
-    - name: Run flake8 & mypy
+    - name: Run ruff
       run: |
         cd app && make lint
   tests:
