@@ -50,9 +50,9 @@ coverage:
 mypy:
 	$(RUN) mypy .
 
-flake8:
-	$(RUN) flake8 .
+ruff:
+	$(RUN) ruff check .
 
-lint: flake8 mypy
+lint: ruff mypy
 
 test: venv lint coverage

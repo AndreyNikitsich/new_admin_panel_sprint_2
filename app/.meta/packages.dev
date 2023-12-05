@@ -1,164 +1,41 @@
 asgiref==3.7.2
     # via django
-astor==0.8.1
-    # via wemake-python-styleguide
-attrs==23.1.0
-    # via
-    #   flake8-bugbear
-    #   flake8-eradicate
-    #   wemake-python-styleguide
-bandit==1.7.5
-    # via
-    #   -r .meta/requirements-dev.in
-    #   flake8-bandit
-cfgv==3.4.0
-    # via pre-commit
 coverage[toml]==7.3.2
     # via
     #   coverage
     #   pytest-cov
-darglint==1.8.1
-    # via wemake-python-styleguide
-distlib==0.3.7
-    # via virtualenv
 django==4.2.6
     # via
     #   -r .meta/requirements.in
     #   django-debug-toolbar
+    #   djangorestframework
 django-debug-toolbar==4.2.0
     # via -r .meta/requirements.in
 django-split-settings==1.2.0
     # via -r .meta/requirements.in
-docutils==0.20.1
-    # via restructuredtext-lint
-eradicate==2.3.0
-    # via flake8-eradicate
-filelock==3.13.1
-    # via virtualenv
-flake8==6.1.0
-    # via
-    #   -r .meta/requirements-dev.in
-    #   flake8-bandit
-    #   flake8-broken-line
-    #   flake8-bugbear
-    #   flake8-commas
-    #   flake8-comprehensions
-    #   flake8-debugger
-    #   flake8-docstrings
-    #   flake8-eradicate
-    #   flake8-isort
-    #   flake8-quotes
-    #   flake8-rst-docstrings
-    #   flake8-string-format
-    #   pep8-naming
-    #   wemake-python-styleguide
-flake8-bandit==4.1.1
-    # via
-    #   -r .meta/requirements-dev.in
-    #   wemake-python-styleguide
-flake8-broken-line==1.0.0
-    # via wemake-python-styleguide
-flake8-bugbear==23.9.16
-    # via wemake-python-styleguide
-flake8-commas==2.1.0
-    # via wemake-python-styleguide
-flake8-comprehensions==3.14.0
-    # via wemake-python-styleguide
-flake8-debugger==4.1.2
-    # via wemake-python-styleguide
-flake8-docstrings==1.7.0
-    # via wemake-python-styleguide
-flake8-eradicate==1.5.0
-    # via wemake-python-styleguide
-flake8-isort==6.1.1
-    # via wemake-python-styleguide
-flake8-quotes==3.3.2
-    # via wemake-python-styleguide
-flake8-rst-docstrings==0.3.0
-    # via wemake-python-styleguide
-flake8-string-format==0.3.0
-    # via wemake-python-styleguide
-gitdb==4.0.11
-    # via gitpython
-gitpython==3.1.40
-    # via bandit
-identify==2.5.31
-    # via pre-commit
+djangorestframework==3.14.0
+    # via -r .meta/requirements.in
 iniconfig==2.0.0
     # via pytest
-isort==5.12.0
-    # via
-    #   -r .meta/requirements-dev.in
-    #   flake8-isort
-markdown-it-py==3.0.0
-    # via rich
-mccabe==0.7.0
-    # via flake8
-mdurl==0.1.2
-    # via markdown-it-py
-nodeenv==1.8.0
-    # via pre-commit
 packaging==23.2
     # via pytest
-pbr==6.0.0
-    # via stevedore
-pep8-naming==0.13.3
-    # via wemake-python-styleguide
-platformdirs==3.11.0
-    # via virtualenv
 pluggy==1.3.0
     # via pytest
-pre-commit==3.5.0
-    # via -r .meta/requirements-dev.in
 psycopg2-binary==2.9.9
     # via -r .meta/requirements.in
-pycodestyle==2.11.1
-    # via
-    #   flake8
-    #   flake8-debugger
-pydocstyle==6.3.0
-    # via flake8-docstrings
-pyflakes==3.1.0
-    # via flake8
-pygments==2.16.1
-    # via
-    #   flake8-rst-docstrings
-    #   rich
-    #   wemake-python-styleguide
 pytest==7.4.3
     # via
     #   -r .meta/requirements-dev.in
     #   pytest-cov
 pytest-cov==4.1.0
     # via -r .meta/requirements-dev.in
-python-dotenv==1.0.0
+pytz==2023.3.post1
+    # via djangorestframework
+ruff==0.1.7
     # via -r .meta/requirements-dev.in
-pyyaml==6.0.1
-    # via
-    #   bandit
-    #   pre-commit
-restructuredtext-lint==1.4.0
-    # via flake8-rst-docstrings
-rich==13.7.0
-    # via bandit
-smmap==5.0.1
-    # via gitdb
-snowballstemmer==2.2.0
-    # via pydocstyle
 sqlparse==0.4.4
     # via
     #   django
     #   django-debug-toolbar
-stevedore==5.1.0
-    # via bandit
-typing-extensions==4.8.0
-    # via wemake-python-styleguide
 uwsgi==2.0.23
     # via -r .meta/requirements.in
-virtualenv==20.24.6
-    # via pre-commit
-wemake-python-styleguide==0.18.0
-    # via -r .meta/requirements-dev.in
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
