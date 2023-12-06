@@ -17,12 +17,12 @@ services:
       ENVIRONMENT: PROD
 
   postgres:
-    image: postgres:13
+    image: postgres:15.5
     volumes:
       - ./postgres/data:/var/lib/postgresql/data
       - ./postgres/create-content-schema.sh:/docker-entrypoint-initdb.d/create-content-schema.sh
-    ports:
-      - "5432:5432"
+    expose:
+      - "5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -d ${DB_NAME} -U ${DB_USER}"]
       interval: 1s

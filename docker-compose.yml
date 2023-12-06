@@ -18,7 +18,7 @@ services:
       ENVIRONMENT: LOCAL
 
   postgres:
-    image: postgres:13
+    image: postgres:15.5
     volumes:
       - ./postgres/data:/var/lib/postgresql/data
       - ./postgres/create-content-schema.sh:/docker-entrypoint-initdb.d/create-content-schema.sh
