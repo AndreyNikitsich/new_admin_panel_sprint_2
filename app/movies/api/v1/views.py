@@ -23,5 +23,5 @@ class FilmWorkReadOnlyViewSet(ReadOnlyModelViewSet):
             "persons__full_name", filter=Q(personfilmwork__role=PersonFilmWork.Roles.ACTOR), distinct=True
         )
         return (
-            FilmWork.objects.all().values().annotate(genres=genres, directors=directors, writers=writers, actors=actors)
+            FilmWork.objects.values().annotate(genres=genres, directors=directors, writers=writers, actors=actors)
         )
