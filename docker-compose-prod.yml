@@ -48,3 +48,7 @@ services:
 volumes:
   static:
   media:
+
+networks:
+  default:
+      name: movies
